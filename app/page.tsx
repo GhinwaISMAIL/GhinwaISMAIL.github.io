@@ -1,4 +1,4 @@
-import { Award, BookOpen, ExternalLink, FileText, Github, GraduationCap, Linkedin } from "lucide-react";
+import { Award, BookOpen, ExternalLink, FileText, Github, GraduationCap, Linkedin, Medal, Sparkles } from "lucide-react";
 
 const experience = [
   {
@@ -511,17 +511,25 @@ export default function Home() {
           </figure>
           <div className="award-list">
             <article className="academic-excellence-card">
-              <span>Academic Excellence</span>
+              <span className="academic-excellence-label"><Sparkles aria-hidden="true" /> Academic Excellence</span>
               <h3>Ranked first throughout the four-year Bachelor’s programme</h3>
               <p className="degree-label">BSc in Telecommunication Technologies · Tishreen University</p>
               <p className="excellence-summary">
                 Ranked first in the cohort in each of the four academic years of the Bachelor’s programme.
               </p>
               <ol className="excellence-years">
-                {["Year 1", "Year 2", "Year 3", "Year 4"].map((year) => (
+                {[
+                  ["2017", "Year 1"],
+                  ["2018", "Year 2"],
+                  ["2019", "Year 3"],
+                  ["2020", "Year 4"],
+                ].map(([year, stage]) => (
                   <li key={year}>
-                    <strong>{`${year} — Ranked 1st in the cohort`}</strong>
-                    <span>Certificate for the First-Ranked Student</span>
+                    <span className="excellence-icon"><Medal aria-hidden="true" /></span>
+                    <div className="excellence-entry">
+                      <strong>{`${year} · ${stage} — Ranked 1st in the cohort`}</strong>
+                      <span className="certificate-label">Certificate for the First-Ranked Student</span>
+                    </div>
                   </li>
                 ))}
               </ol>

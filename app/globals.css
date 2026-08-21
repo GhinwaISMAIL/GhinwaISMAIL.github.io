@@ -1083,6 +1083,18 @@ h1 {
   padding: 34px;
 }
 
+.academic-excellence-label {
+  align-items: center;
+  display: inline-flex;
+  gap: 7px;
+}
+
+.academic-excellence-label svg {
+  color: #b47a18;
+  height: 15px;
+  width: 15px;
+}
+
 .academic-excellence-card h3 {
   font-size: clamp(1.65rem, 2.35vw, 2.3rem);
   margin: 18px 0 10px;
@@ -1113,12 +1125,33 @@ h1 {
 }
 
 .excellence-years li {
+  align-items: start;
   background: rgba(255,255,255,0.3);
   border-bottom: 1px solid var(--line);
   border-right: 1px solid var(--line);
   display: grid;
-  gap: 8px;
+  gap: 14px;
+  grid-template-columns: 36px 1fr;
   padding: 17px 18px;
+}
+
+.academic-excellence-card .excellence-icon {
+  align-items: center;
+  background: linear-gradient(145deg, #f7df96, #c78a23);
+  border: 1px solid rgba(126,77,8,0.52);
+  border-radius: 50%;
+  color: #5a3506;
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.excellence-icon svg { height: 17px; width: 17px; }
+
+.excellence-entry {
+  display: grid;
+  gap: 8px;
 }
 
 .excellence-years strong {
@@ -1127,7 +1160,7 @@ h1 {
   line-height: 1.25;
 }
 
-.academic-excellence-card .excellence-years span {
+.academic-excellence-card .certificate-label {
   color: var(--teal);
   font-size: 0.57rem;
   font-weight: 800;

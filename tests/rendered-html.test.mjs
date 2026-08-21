@@ -43,6 +43,12 @@ test("renders Ghinwa Ismail's complete career portfolio", async () => {
   assert.match(html, /lucide-award/);
   assert.match(html, /Ranked first throughout the four-year Bachelor’s programme/);
   assert.match(html, /Ranked first in the cohort in each of the four academic years/);
+  assert.match(html, /2017 · Year 1 — Ranked 1st in the cohort/);
+  assert.match(html, /2018 · Year 2 — Ranked 1st in the cohort/);
+  assert.match(html, /2019 · Year 3 — Ranked 1st in the cohort/);
+  assert.match(html, /2020 · Year 4 — Ranked 1st in the cohort/);
+  assert.match(html, /lucide-sparkles/);
+  assert.match(html, /lucide-medal/);
   assert.equal((html.match(/Certificate for the First-Ranked Student/g) ?? []).length, 8);
   assert.doesNotMatch(html, /AL-Basil First Rank Certificates/);
   assert.match(html, /TwinDash/);
