@@ -510,8 +510,23 @@ export default function Home() {
             </figcaption>
           </figure>
           <div className="award-list">
+            <article className="academic-excellence-card">
+              <span>Academic Excellence</span>
+              <h3>Ranked first throughout the four-year Bachelor’s programme</h3>
+              <p className="degree-label">BSc in Telecommunication Technologies · Tishreen University</p>
+              <p className="excellence-summary">
+                Ranked first in the cohort in each of the four academic years of the Bachelor’s programme.
+              </p>
+              <ol className="excellence-years">
+                {["Year 1", "Year 2", "Year 3", "Year 4"].map((year) => (
+                  <li key={year}>
+                    <strong>{`${year} — Ranked 1st in the cohort`}</strong>
+                    <span>Certificate for the First-Ranked Student</span>
+                  </li>
+                ))}
+              </ol>
+            </article>
             <article><span>2020</span><h3>AL-Basil Outstanding Graduate Certificate</h3></article>
-            <article><span>2017 · 2018 · 2019</span><h3>AL-Basil First Rank Certificates</h3></article>
             <article><span>2021</span><h3>Al-Basel Fair for Innovation · Honored Participant</h3></article>
           </div>
         </div>

@@ -41,6 +41,10 @@ test("renders Ghinwa Ismail's complete career portfolio", async () => {
   assert.match(html, /Toward Trustworthy Digital Twins for 5G Networks/);
   assert.match(html, /class="award-seal"[^>]*aria-label="Best Poster Award 2026"/);
   assert.match(html, /lucide-award/);
+  assert.match(html, /Ranked first throughout the four-year Bachelor’s programme/);
+  assert.match(html, /Ranked first in the cohort in each of the four academic years/);
+  assert.equal((html.match(/Certificate for the First-Ranked Student/g) ?? []).length, 8);
+  assert.doesNotMatch(html, /AL-Basil First Rank Certificates/);
   assert.match(html, /TwinDash/);
   assert.match(html, /Accepted demo/);
   assert.match(html, /Publication forthcoming/);

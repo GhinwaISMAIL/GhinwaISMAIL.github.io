@@ -1077,6 +1077,64 @@ h1 {
 
 .award-list h3 { font-size: 1.25rem; line-height: 1.25; margin-top: 55px; }
 
+.award-list .academic-excellence-card {
+  grid-column: 1 / -1;
+  min-height: 0;
+  padding: 34px;
+}
+
+.academic-excellence-card h3 {
+  font-size: clamp(1.65rem, 2.35vw, 2.3rem);
+  margin: 18px 0 10px;
+  max-width: 680px;
+}
+
+.academic-excellence-card .degree-label {
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.academic-excellence-card .excellence-summary {
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin: 21px 0 26px;
+  max-width: 680px;
+}
+
+.excellence-years {
+  border-left: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.excellence-years li {
+  background: rgba(255,255,255,0.3);
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+  padding: 17px 18px;
+}
+
+.excellence-years strong {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.25;
+}
+
+.academic-excellence-card .excellence-years span {
+  color: var(--teal);
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
 footer {
   background: var(--ink-deep);
   color: var(--paper-light);
@@ -1245,6 +1303,8 @@ footer {
   .recognition-layout { grid-template-columns: 1fr; }
   .recognition-photo { min-height: 500px; }
   .award-list { grid-template-columns: 1fr; }
+  .award-list .academic-excellence-card { grid-column: 1; padding: 28px 22px; }
+  .excellence-years { grid-template-columns: 1fr; }
   footer { padding-top: 80px; }
   .footer-bottom { margin-top: 80px; }
 }
