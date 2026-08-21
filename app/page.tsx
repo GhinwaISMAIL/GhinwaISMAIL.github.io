@@ -56,8 +56,8 @@ const projects = [
 
 const education = [
   ["2024 — Present", "PhD in Telecommunications", "University of Strasbourg · ICube Lab"],
-  ["2023 — 2024", "MSc Data Science & Network Intelligence", "Télécom SudParis · France"],
-  ["2022 — 2024", "MSc Telecommunication Engineering", "University of Calabria · Italy"],
+  ["2023 — 2024", "MSc Data Science & Network Intelligence", "Télécom SudParis · France · Final grade: 17/20"],
+  ["2022 — 2024", "MSc Telecommunication Engineering", "University of Calabria · Italy · Final grade: 108/110"],
   ["2016 — 2020", "BSc Telecommunication Technologies", "Tishreen University · Syria · 90.5%"],
 ];
 
@@ -156,6 +156,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="latest-shell">
+        <a className="latest-strip" href="#publications" aria-label="View the latest IEEE NetSoft 2026 publication">
+          <span className="latest-label">Latest</span>
+          <strong>IEEE NetSoft 2026</strong>
+          <span>Full paper, presentation, code and artifacts</span>
+          <span className="latest-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
 
       <section className="about section-shell reveal" id="about">
         <div className="about-copy">

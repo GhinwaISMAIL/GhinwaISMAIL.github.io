@@ -28,6 +28,9 @@ test("renders Ghinwa Ismail's complete career portfolio", async () => {
   assert.match(html, /currently pursuing a PhD at ICube Laboratory/);
   assert.doesNotMatch(html, /predict network behaviour, support what-if analysis/);
   assert.match(html, /Telecommunications · Research · Engineering/);
+  assert.match(html, /Latest/);
+  assert.match(html, /Full paper, presentation, code and artifacts/);
+  assert.doesNotMatch(html, /network-constellation|constellation-node|constellation-packet/);
   assert.doesNotMatch(html, /Selected work|A selection of research and engineering work/);
   assert.doesNotMatch(html, /useful experimental tools/);
   assert.doesNotMatch(html, /id="research"|Current research|KPI Prediction and What-If Analysis/);
@@ -62,6 +65,8 @@ test("renders Ghinwa Ismail's complete career portfolio", async () => {
   assert.match(html, /Presenting at IEEE NetSoft in Berlin/);
   assert.match(html, /SLICES-RI \/ CONVERGE Summer School/);
   assert.match(html, /INESC TEC in Porto, Portugal/);
+  assert.match(html, /Télécom SudParis · France · Final grade: 17\/20/);
+  assert.match(html, /University of Calabria · Italy · Final grade: 108\/110/);
   assert.match(html, /Jeronimo Herdoïza/);
   assert.match(html, /Deployment and Benchmarking of a Reproducible 5G Standalone Platform/);
   assert.match(html, /id="publications"/);
