@@ -4,7 +4,7 @@ const researchThemes = [
   {
     number: "01",
     title: "Network Digital Twins for 5G",
-    text: "I build network replicas from measurements collected on real 5G systems and evaluate how closely they reproduce the measured behaviour.",
+    text: "My work develops the traffic models and validation methods needed for trustworthy Network Digital Twins, using measurements from reproducible 5G experiments.",
     tags: [
       "Network traces",
       "Digital Twin validation",
@@ -288,7 +288,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <p className="section-kicker">Research</p>
-            <h2>Building trustworthy Digital Twins from measured 5G systems.</h2>
+            <h2>Current work toward trustworthy Network Digital Twins.</h2>
           </div>
           <p>
             My PhD begins with measured traffic and reproducible experiments.
