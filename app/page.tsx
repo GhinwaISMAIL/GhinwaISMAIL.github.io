@@ -484,6 +484,10 @@ export default function Home() {
               decoding="async"
               alt="Ghinwa Ismail presenting her award-winning Network Digital Twins poster"
             />
+            <div className="award-seal" aria-label="Best Poster Award 2026">
+              <span>Best Poster</span>
+              <strong>2026</strong>
+            </div>
             <figcaption>Best Poster Award · ICube, 2 July 2026</figcaption>
           </figure>
         </div>

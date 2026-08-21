@@ -945,6 +945,40 @@ h1 {
   width: 100%;
 }
 
+.award-seal {
+  align-items: center;
+  aspect-ratio: 1;
+  background: var(--gold);
+  border: 9px double rgba(255,253,248,0.68);
+  border-radius: 50%;
+  box-shadow: 0 12px 28px rgba(4,24,31,0.2);
+  color: var(--ink-deep);
+  display: flex;
+  flex-direction: column;
+  height: 112px;
+  justify-content: center;
+  pointer-events: none;
+  position: absolute;
+  right: 24px;
+  text-align: center;
+  top: 24px;
+  transform: rotate(-8deg);
+  width: 112px;
+  z-index: 2;
+}
+
+.award-seal span {
+  font-size: 0.57rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.award-seal strong {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+}
+
 .recognition-poster figcaption {
   background: rgba(4,24,31,0.92);
   bottom: 0;
@@ -1183,6 +1217,7 @@ footer {
   .recognition-feature { grid-template-columns: 1fr; }
   .recognition-copy { padding: 34px 24px; }
   .recognition-poster { min-height: 430px; }
+  .award-seal { height: 96px; right: 18px; top: 18px; width: 96px; }
   .recognition-layout { grid-template-columns: 1fr; }
   .recognition-photo { min-height: 500px; }
   .award-list { grid-template-columns: 1fr; }

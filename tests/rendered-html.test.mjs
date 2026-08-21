@@ -39,6 +39,7 @@ test("renders Ghinwa Ismail's complete career portfolio", async () => {
   assert.match(html, /10\.1109\/NETSOFT70012\.2026\.11603454/);
   assert.doesNotMatch(html, /Munich, Germany/);
   assert.match(html, /Toward Trustworthy Digital Twins for 5G Networks/);
+  assert.match(html, /class="award-seal"[^>]*aria-label="Best Poster Award 2026"/);
   assert.match(html, /TwinDash/);
   assert.match(html, /Accepted demo/);
   assert.match(html, /Publication forthcoming/);
