@@ -28,7 +28,12 @@ test("renders Ghinwa Ismail's complete research portfolio", async () => {
   assert.match(html, /uncertainty-aware KPI prediction, what-if analysis, and adaptive network operation/);
   assert.doesNotMatch(html, /predict network behaviour, support what-if analysis/);
   assert.match(html, /Academic research portfolio/);
-  assert.match(html, /A concise view of what I am working on now/);
+  assert.match(html, /A selection of research and engineering work/);
+  assert.match(html, /Network Digital Twins for 5G/);
+  assert.match(html, /Trace-Driven Traffic Modelling/);
+  assert.match(html, /Reproducible 5G Experimentation/);
+  assert.match(html, /KPI Prediction and What-If Analysis/);
+  assert.match(html, /Ongoing research direction/);
   assert.match(html, /Lightweight Trace-Driven Burst Traffic Generation/);
   assert.match(html, /IEEE NetSoft(?: 2026)? · Berlin, Germany/);
   assert.match(html, /Full paper · 2026/);
@@ -62,9 +67,9 @@ test("renders Ghinwa Ismail's complete research portfolio", async () => {
   assert.match(html, /\/assets\/documents\/resume\.pdf/);
   assert.match(html, /\/assets\/icons\/favicon\.svg/);
   assert.doesNotMatch(html, /(?:src|href)="\/(?:portrait-highres|resume|poster-2026)\.(?:jpg|pdf)"/);
-  assert.equal((html.match(/<img\b/g) ?? []).length, 11);
-  assert.equal((html.match(/<img\b[^>]*\bwidth="\d+"[^>]*\bheight="\d+"/g) ?? []).length, 11);
-  assert.equal((html.match(/<img\b[^>]*\bloading="lazy"/g) ?? []).length, 10);
+  assert.equal((html.match(/<img\b/g) ?? []).length, 8);
+  assert.equal((html.match(/<img\b[^>]*\bwidth="\d+"[^>]*\bheight="\d+"/g) ?? []).length, 8);
+  assert.equal((html.match(/<img\b[^>]*\bloading="lazy"/g) ?? []).length, 7);
   assert.ok(
     html.indexOf("<header") < html.indexOf('<main id="main-content">'),
     "the site header sits outside and before the main landmark",
@@ -76,6 +81,13 @@ test("renders Ghinwa Ismail's complete research portfolio", async () => {
   assert.ok(
     html.indexOf("SLICES-RI / CONVERGE Summer School") > html.indexOf('id="experience"'),
     "academic activities belong in the experience section",
+  );
+  assert.ok(
+    html.indexOf('id="about"') < html.indexOf('id="work"') &&
+      html.indexOf('id="work"') < html.indexOf('id="research"') &&
+      html.indexOf('id="publications"') < html.indexOf('id="projects"') &&
+      html.indexOf('id="projects"') < html.indexOf('id="experience"'),
+    "the main sections follow the intended portfolio order",
   );
   assert.doesNotMatch(html, /SkeletonPreview|react-loading-skeleton/i);
 });

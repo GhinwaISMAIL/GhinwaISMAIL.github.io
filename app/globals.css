@@ -21,9 +21,6 @@ html {
   scroll-padding-top: 90px;
 }
 
-section[id],
-footer[id] { scroll-margin-top: 90px; }
-
 body {
   background: var(--paper);
   color: var(--ink);
@@ -643,6 +640,20 @@ blockquote {
 .research-grid article:hover { background: rgba(21,184,170,0.08); }
 .research-grid h3 { font-size: 2rem; margin: 58px 0 18px; }
 
+.research-stage {
+  border: 1px solid rgba(21,184,170,0.5);
+  border-radius: 999px;
+  color: var(--teal-bright);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 7px 10px;
+  position: absolute;
+  right: 38px;
+  text-transform: uppercase;
+  top: 38px;
+}
+
 .research-grid ul {
   display: flex;
   flex-wrap: wrap;
@@ -748,136 +759,6 @@ blockquote {
 }
 
 .publication-cta svg { height: 15px; width: 15px; }
-
-.poster-feature { padding-top: 38px; }
-
-.poster-panel {
-  align-items: center;
-  background:
-    linear-gradient(125deg, rgba(8,127,122,0.13), transparent 50%),
-    var(--paper-light);
-  border: 1px solid var(--line);
-  display: grid;
-  gap: 42px;
-  grid-template-columns: 1.08fr 0.92fr;
-  min-height: 470px;
-  overflow: hidden;
-  padding: 55px;
-  position: relative;
-}
-
-.award-seal {
-  align-items: center;
-  aspect-ratio: 1;
-  background: var(--gold);
-  border: 10px double rgba(255,253,248,0.65);
-  border-radius: 50%;
-  color: var(--ink-deep);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  bottom: 24px;
-  height: 122px;
-  position: absolute;
-  right: 24px;
-  transform: rotate(-8deg);
-  width: 122px;
-  z-index: 2;
-}
-
-.award-seal span {
-  font-size: 0.6rem;
-  font-weight: 850;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.award-seal strong { font-family: var(--serif); font-size: 1.7rem; }
-
-.poster-copy h2 {
-  font-size: clamp(2.35rem, 4.5vw, 4.5rem);
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.02;
-  margin-bottom: 24px;
-}
-
-.poster-copy > p:not(.section-kicker) {
-  color: var(--ink-soft);
-  line-height: 1.72;
-  max-width: 670px;
-}
-
-.poster-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 27px 0; }
-
-.poster-tags span {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--teal);
-  font-size: 0.65rem;
-  font-weight: 750;
-  padding: 8px 11px;
-}
-
-.poster-links { display: flex; flex-wrap: wrap; gap: 22px; }
-
-.poster-links a {
-  border-bottom: 1px solid var(--ink-deep);
-  font-size: 0.7rem;
-  font-weight: 750;
-  padding-bottom: 5px;
-}
-
-.poster-main-photo { min-height: 520px; overflow: hidden; position: relative; }
-
-.poster-main-photo::after {
-  background: linear-gradient(180deg, transparent 60%, rgba(4,24,31,0.26));
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-}
-
-.poster-main-photo > img {
-  height: 520px;
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-}
-
-.poster-gallery {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: 1.05fr 1.15fr 0.72fr;
-  margin-top: 18px;
-}
-
-.poster-gallery > a,
-.poster-gallery figure {
-  background: var(--paper-light);
-  border: 1px solid var(--line);
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-}
-
-.poster-gallery img { height: 390px; object-fit: cover; width: 100%; }
-.poster-gallery > a img { object-position: center top; }
-.poster-gallery figure:nth-child(2) img { object-fit: contain; padding: 16px; }
-
-.poster-gallery span,
-.poster-gallery figcaption {
-  background: rgba(4,24,31,0.92);
-  bottom: 0;
-  color: var(--paper-light);
-  font-size: 0.64rem;
-  left: 0;
-  letter-spacing: 0.04em;
-  padding: 12px 14px;
-  position: absolute;
-  right: 0;
-}
 
 .experience { border-bottom: 1px solid var(--line); }
 
@@ -1132,6 +1013,81 @@ blockquote {
 
 .awards { border-top: 1px solid var(--line); padding-top: 90px; }
 
+.recognition-feature {
+  align-items: stretch;
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr 0.84fr;
+  margin-bottom: 24px;
+}
+
+.recognition-copy {
+  align-self: center;
+  padding: 52px;
+}
+
+.recognition-copy > span {
+  color: var(--teal);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.recognition-copy h2 {
+  font-size: clamp(2.25rem, 4.5vw, 4.4rem);
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+  margin: 24px 0;
+}
+
+.recognition-copy p {
+  color: var(--ink-soft);
+  line-height: 1.72;
+  max-width: 630px;
+}
+
+.recognition-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.recognition-links a {
+  border-bottom: 1px solid var(--ink-deep);
+  font-size: 0.7rem;
+  font-weight: 750;
+  padding-bottom: 5px;
+}
+
+.recognition-poster {
+  margin: 0;
+  min-height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+
+.recognition-poster img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.recognition-poster figcaption {
+  background: rgba(4,24,31,0.92);
+  bottom: 0;
+  color: var(--paper-light);
+  font-size: 0.66rem;
+  left: 0;
+  letter-spacing: 0.04em;
+  padding: 13px 16px;
+  position: absolute;
+  right: 0;
+}
+
 .recognition-layout {
   align-items: stretch;
   display: grid;
@@ -1299,9 +1255,7 @@ footer {
   .work-intro { position: static; }
   .about { display: block; }
   .about-columns { grid-template-columns: 1fr; }
-  .poster-panel { grid-template-columns: 1fr 0.8fr; }
-  .poster-gallery { grid-template-columns: 1fr 1fr; }
-  .poster-gallery figure:last-child { display: none; }
+  .recognition-feature { grid-template-columns: 1fr 0.9fr; }
   .student-card { grid-template-columns: 0.9fr 1.4fr; }
   .supervisor-line { grid-column: 1 / 3; }
   .supervisor-line {
@@ -1351,12 +1305,6 @@ footer {
   .publication-row-links { align-items: flex-start; }
   .forthcoming { justify-self: start; }
   .publication-cta { align-items: flex-start; flex-direction: column; gap: 18px; padding-inline: 0; }
-  .poster-panel { align-items: start; grid-template-columns: 1fr; padding: 34px 24px; }
-  .poster-main-photo, .poster-main-photo > img { min-height: 430px; height: 430px; }
-  .award-seal { height: 105px; width: 105px; }
-  .poster-gallery { grid-template-columns: 1fr; }
-  .poster-gallery figure:last-child { display: block; }
-  .poster-gallery img { height: 380px; }
   .timeline article { gap: 13px; grid-template-columns: 1fr; }
   .research-activities-grid { grid-template-columns: 1fr; }
   .research-activities-grid figcaption { padding: 28px 24px; }
@@ -1372,6 +1320,9 @@ footer {
   .academic-gallery { grid-template-columns: 1fr; }
   .academic-photo { margin-inline: auto; max-width: 430px; width: 100%; }
   .skills { padding: 30px 24px; }
+  .recognition-feature { grid-template-columns: 1fr; }
+  .recognition-copy { padding: 34px 24px; }
+  .recognition-poster { min-height: 430px; }
   .recognition-layout { grid-template-columns: 1fr; }
   .recognition-photo { min-height: 500px; }
   .award-list { grid-template-columns: 1fr; }

@@ -3,9 +3,9 @@
 Personal academic portfolio of Ghinwa Ismail, PhD researcher at the University
 of Strasbourg's ICube Laboratory.
 
-The site presents research on Network Digital Twins, machine learning for
-wireless systems, 5G/IoT, SDN and edge computing, alongside publications,
-projects, experience, education, awards, and contact links.
+The site presents current research on trustworthy Network Digital Twins for 5G,
+trace-driven traffic modelling, reproducible experimentation, publications,
+earlier engineering projects, experience, education, and recognition.
 
 ## Project structure
 

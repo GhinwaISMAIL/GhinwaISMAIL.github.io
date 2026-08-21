@@ -3,54 +3,50 @@ import { BookOpen, ExternalLink, FileText, Github, GraduationCap, Linkedin } fro
 const researchThemes = [
   {
     number: "01",
-    title: "Network Digital Twins",
-    text: "Self-calibrating digital replicas that reproduce wireless behaviour and support trustworthy, repeatable experimentation.",
+    title: "Network Digital Twins for 5G",
+    text: "I build network replicas from measurements collected on real 5G systems and evaluate how closely they reproduce the measured behaviour.",
     tags: [
-      "Trace-driven modelling",
-      "Synthetic traffic",
+      "Network traces",
+      "Digital Twin validation",
       "Calibration",
-      "Validation",
-      "What-if analysis",
+      "5G systems",
       "Reproducibility",
     ],
   },
   {
     number: "02",
-    title: "Machine Learning for Networks",
-    text: "Data-driven models that learn traffic dynamics, predict performance, and improve network decisions in real time.",
+    title: "Trace-Driven Traffic Modelling",
+    text: "I study application traffic from packet traces and use burst-based models to generate realistic workloads for controlled experiments.",
     tags: [
+      "ON/OFF burst models",
       "Clustering",
       "Markov models",
-      "Generative modelling",
-      "Time-series analysis",
-      "KPI prediction",
-      "Trustworthy AI",
+      "Synthetic workloads",
+      "Traffic reconstruction",
     ],
   },
   {
     number: "03",
-    title: "5G, IoT & IIoT",
-    text: "Efficient and reliable communication for next-generation connected systems, from sensing to adaptive services.",
+    title: "Reproducible 5G Experimentation",
+    text: "I deploy OpenAirInterface 5G Standalone testbeds and define repeatable procedures for traffic injection, KPI measurement, and benchmarking.",
     tags: [
-      "5G Standalone",
       "OpenAirInterface",
+      "5G Standalone",
       "Network testbeds",
-      "Wireless IoT",
-      "IIoT",
+      "Controlled measurements",
       "Performance benchmarking",
     ],
   },
   {
     number: "04",
-    title: "SDN & Edge Systems",
-    text: "Software-defined orchestration and edge intelligence for networks that can observe, adapt, and optimize themselves.",
+    title: "KPI Prediction and What-If Analysis",
+    stage: "Ongoing research direction",
+    text: "This is the next stage of my PhD. I plan to use validated traffic and testbed data for uncertainty-aware KPI prediction and controlled what-if studies.",
     tags: [
-      "SDN / NFV",
-      "Edge intelligence",
-      "Cloud-native systems",
-      "Network orchestration",
-      "Adaptive control",
-      "Energy efficiency",
+      "KPI prediction",
+      "Uncertainty estimation",
+      "What-if experiments",
+      "Longer-term direction",
     ],
   },
 ];
@@ -60,7 +56,7 @@ const experience = [
     period: "2024 — Present",
     role: "PhD Researcher in Telecommunications",
     place: "University of Strasbourg · ICube Laboratory",
-    text: "Developing self-calibrating Network Digital Twins, trace-driven traffic models, and SDN-based orchestration for adaptive, energy-aware wireless systems.",
+    text: "I study trustworthy Network Digital Twins for 5G, with current work on trace-driven traffic generation and reproducible evaluation using OpenAirInterface testbeds.",
   },
   {
     period: "Feb — Aug 2024",
@@ -80,32 +76,32 @@ const projects = [
   {
     title: "Video streaming quality prediction",
     label: "Data science · Quality of experience",
-    text: "A comparative modelling pipeline using Random Forest, XGBoost, and SVC to predict Mean Opinion Scores and identify the factors behind viewer satisfaction.",
+    text: "I compared Random Forest, XGBoost, and SVC models for predicting Mean Opinion Scores and analysing which inputs influence perceived video quality.",
   },
   {
     title: "Four-element antenna array",
     label: "RF engineering · Simulation",
-    text: "A 10 GHz antenna-array design optimized for a −22 dB S11 target, 0.4 GHz bandwidth, and a controlled directional radiation pattern.",
+    text: "I designed and simulated a four-element 10 GHz antenna array with a −22 dB S11 target, 0.4 GHz bandwidth, and a directional radiation pattern.",
   },
   {
     title: "Sustainable greenhouse automation",
     label: "Embedded systems · IoT",
-    text: "An IoT agriculture system coordinating sensing, temperature, lighting, and irrigation to improve greenhouse efficiency and sustainability.",
+    text: "I built an agriculture prototype that coordinates sensing, temperature control, lighting, and irrigation inside a greenhouse.",
   },
   {
     title: "Privacy-preserving bed bug detection",
     label: "Computer vision · Federated learning",
-    text: "A hotel pest-monitoring system combining YOLOv5 for real-time detection, federated learning for on-device privacy, and Random Forest models for prioritization.",
+    text: "I developed a hotel pest-monitoring concept using YOLOv5 for detection, federated learning to keep data on device, and a Random Forest model for prioritisation.",
   },
   {
     title: "Continuous cardiac monitoring",
     label: "Embedded health · GSM",
-    text: "A heart-monitoring device with continuous sensing and a GSM-based emergency alert mechanism for faster response coordination.",
+    text: "I built a continuous heart-monitoring prototype that sends an emergency alert over GSM when intervention may be needed.",
   },
   {
     title: "NLG evaluation · SHROOM 2024",
     label: "Natural language processing",
-    text: "SemEval-2024 Task 6 work on detecting and classifying inaccurate outputs from natural-language-generation systems.",
+    text: "I worked on SemEval-2024 Task 6, which focused on detecting and classifying inaccurate outputs from natural-language-generation systems.",
   },
 ];
 
@@ -133,22 +129,20 @@ export default function Home() {
           <span>Ghinwa Ismail</span>
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href="#work">Selected work</a>
           <a href="#about">About</a>
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
-          <a href="#students">Students</a>
+          <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <nav aria-label="Mobile navigation">
-            <a href="#work">Selected work</a>
             <a href="#about">About</a>
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
-            <a href="#students">Students</a>
+            <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
           </nav>
@@ -216,63 +210,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="work-index section-shell reveal" id="work" aria-labelledby="work-title">
-        <div className="work-intro">
-          <p className="section-kicker">Selected work</p>
-          <h2 id="work-title">A concise view of what I am working on now.</h2>
-          <p>
-            Research outputs, experimental systems, recognition, and student
-            supervision from my current work at ICube.
-          </p>
-        </div>
-        <div className="work-list">
-          <a href="#publications">
-            <span className="work-number">01</span>
-            <span className="work-type">Publication · IEEE NetSoft 2026</span>
-            <strong>Trace-driven burst traffic generation for 5G Network Digital Twins</strong>
-            <i aria-hidden="true">↘</i>
-          </a>
-          <a href="#poster">
-            <span className="work-number">02</span>
-            <span className="work-type">Award · Journée ICube 2026</span>
-            <strong>Toward Trustworthy Digital Twins for 5G Networks</strong>
-            <i aria-hidden="true">↘</i>
-          </a>
-          <a href="#research">
-            <span className="work-number">03</span>
-            <span className="work-type">Current research</span>
-              <strong>Reproducible 5G platforms and trace-driven traffic models</strong>
-            <i aria-hidden="true">↘</i>
-          </a>
-          <a href="#students">
-            <span className="work-number">04</span>
-            <span className="work-type">Student supervision · M1 2026</span>
-            <strong>Benchmarking a reproducible 5G standalone platform</strong>
-            <i aria-hidden="true">↘</i>
-          </a>
-        </div>
-      </section>
-
       <section className="about section-shell reveal" id="about">
         <div className="about-copy">
           <p className="section-kicker">About</p>
-          <h2>A telecommunications researcher working across network systems and data science.</h2>
+          <h2>A telecommunications researcher combining network experimentation and data-driven methods.</h2>
           <div className="about-columns">
             <p>
-              I am a PhD candidate at the University of Strasbourg, conducting
-              research at the ICube Laboratory on Digital Twins for efficient
-              wireless networks.
+              I am a PhD candidate at the University of Strasbourg, where I
+              work at the ICube Laboratory on trustworthy Network Digital Twins
+              for 5G systems.
             </p>
             <p>
-              My path through Syria, Italy, and France has shaped a
-              multidisciplinary approach spanning embedded systems, network
-              intelligence, machine learning, blockchain, and cloud/edge
-              computing.
+              Before starting the PhD, I worked on networked systems, machine
+              learning projects, embedded prototypes, and a blockchain-based
+              videoconferencing service. My studies in Syria, Italy, and France
+              gave me experience in both engineering and data science.
             </p>
           </div>
           <blockquote>
-            My goal is to turn network data into digital replicas that can
-            explain, predict, and improve the systems they represent.
+            I want Network Digital Twins to behave like useful experimental
+            tools, grounded in measurements and honest about uncertainty.
           </blockquote>
           <div className="doctoral-supervisors" aria-label="Doctoral supervisors">
             <span>Doctoral supervisors</span>
@@ -290,21 +247,59 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="work-index section-shell reveal" id="work" aria-labelledby="work-title">
+        <div className="work-intro">
+          <p className="section-kicker">Selected work</p>
+          <h2 id="work-title">A selection of research and engineering work.</h2>
+          <p>
+            Recent PhD outputs sit alongside earlier work in distributed systems
+            and data science.
+          </p>
+        </div>
+        <div className="work-list">
+          <a href="#publications">
+            <span className="work-number">01</span>
+            <span className="work-type">Full paper · IEEE NetSoft 2026</span>
+            <strong>Trace-driven burst traffic generation for 5G Network Digital Twins</strong>
+            <i aria-hidden="true">↘</i>
+          </a>
+          <a href="#publications">
+            <span className="work-number">02</span>
+            <span className="work-type">Accepted demo · IEEE LCN 2026</span>
+            <strong>TwinDash: a traffic generator for reproducible 5G experiments</strong>
+            <i aria-hidden="true">↘</i>
+          </a>
+          <a href="#publications">
+            <span className="work-number">03</span>
+            <span className="work-type">Paper and prototype · BRAINS 2024</span>
+            <strong>A decentralised videoconferencing service using Ethereum smart contracts</strong>
+            <i aria-hidden="true">↘</i>
+          </a>
+          <a href="#projects">
+            <span className="work-number">04</span>
+            <span className="work-type">Data science project</span>
+            <strong>Video streaming quality prediction</strong>
+            <i aria-hidden="true">↘</i>
+          </a>
+        </div>
+      </section>
+
       <section className="research section-shell reveal" id="research">
         <div className="section-heading">
           <div>
             <p className="section-kicker">Research</p>
-            <h2>From network traces to real-time intelligence.</h2>
+            <h2>Building trustworthy Digital Twins from measured 5G systems.</h2>
           </div>
           <p>
-            Four connected areas guide my work on accurate, adaptive, and
-            energy-aware communication systems.
+            My PhD begins with measured traffic and reproducible experiments.
+            Prediction and what-if analysis come later, once that foundation is reliable.
           </p>
         </div>
         <div className="research-grid">
           {researchThemes.map((theme) => (
             <article key={theme.number}>
               <span className="card-number">{theme.number}</span>
+              {theme.stage && <span className="research-stage">{theme.stage}</span>}
               <h3>{theme.title}</h3>
               <p>{theme.text}</p>
               <ul aria-label={`${theme.title} topics`}>
@@ -319,9 +314,9 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <p className="section-kicker">Publications</p>
-            <h2>Research made reproducible.</h2>
+            <h2>Papers and accepted work.</h2>
           </div>
-          <p>Peer-reviewed and accepted work, with artifacts linked when publicly available.</p>
+          <p>Official links and public artifacts are included when available.</p>
         </div>
 
         <div className="publication-list">
@@ -379,83 +374,41 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="poster-feature section-shell reveal" id="poster">
-        <div className="poster-panel">
-          <div className="poster-copy">
-            <p className="section-kicker">Award-winning poster · Journée ICube Strasbourg</p>
-            <h2>Toward Trustworthy Digital Twins for 5G Networks</h2>
-            <p>
-              Trustworthy Network Digital Twins depend on realistic workloads,
-              reproducible measurements, and reliable predictions. This work
-              connects trace-driven traffic generation, an OpenAirInterface 5G
-              standalone testbed, KPI measurement, and future what-if analysis.
-            </p>
-            <div className="poster-tags">
-              <span>Trustworthy AI</span>
-              <span>5G networks</span>
-              <span>Digital Twins</span>
-            </div>
-            <div className="poster-links">
-              <a href="/assets/documents/poster-2026.pdf" target="_blank">View full poster ↗</a>
-              <a href="https://www.linkedin.com/in/ghinwa-ismail-a14a65249" target="_blank" rel="noreferrer">Award announcement ↗</a>
-            </div>
+      <section className="projects section-shell reveal" id="projects">
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">Engineering and research projects</p>
+            <h2>Projects completed during my studies and engineering work.</h2>
           </div>
-          <div className="poster-main-photo">
-            <img
-              src="/assets/images/publications/poster-presentation-main.jpg"
-              srcSet="/assets/images/publications/poster-presentation-main-540.jpg 540w, /assets/images/publications/poster-presentation-main.jpg 1080w"
-              sizes="(max-width: 760px) 100vw, 46vw"
-              width="1080"
-              height="1148"
-              loading="lazy"
-              decoding="async"
-              alt="Ghinwa Ismail presenting the award-winning Digital Twins poster"
-            />
-            <div className="award-seal" aria-label="Best Poster Award 2026">
-              <span>Best Poster</span>
-              <strong>2026</strong>
-            </div>
+          <p>
+            These projects come from earlier studies and engineering work in data
+            science, RF design, embedded systems, computer vision, and natural language processing.
+          </p>
+        </div>
+        <div className="project-grid">
+          {projects.slice(0, 3).map((project, index) => (
+            <article key={project.title}>
+              <div className="project-topline"><span>{String(index + 1).padStart(2, "0")}</span><span>{project.label}</span></div>
+              <h3>{project.title}</h3>
+              <p>{project.text}</p>
+            </article>
+          ))}
+        </div>
+        <details className="more-projects">
+          <summary>
+            <span>More projects</span>
+            <small>Three additional projects in computer vision, embedded health, and natural language processing</small>
+          </summary>
+          <div className="project-grid">
+            {projects.slice(3).map((project, index) => (
+              <article key={project.title}>
+                <div className="project-topline"><span>{String(index + 4).padStart(2, "0")}</span><span>{project.label}</span></div>
+                <h3>{project.title}</h3>
+                <p>{project.text}</p>
+              </article>
+            ))}
           </div>
-        </div>
-        <div className="poster-gallery">
-          <a href="/assets/documents/poster-2026.pdf" target="_blank" aria-label="Open the full 2026 poster PDF">
-            <img
-              src="/assets/images/publications/poster-2026.jpg"
-              srcSet="/assets/images/publications/poster-2026-800.jpg 800w, /assets/images/publications/poster-2026.jpg 1600w"
-              sizes="(max-width: 760px) 100vw, 34vw"
-              width="1600"
-              height="2263"
-              loading="lazy"
-              decoding="async"
-              alt="Preview of Toward Trustworthy Digital Twins for 5G Networks poster"
-            />
-            <span>Research poster · Open PDF ↗</span>
-          </a>
-          <figure>
-            <img
-              src="/assets/images/publications/poster-award-certificate-640.jpg"
-              srcSet="/assets/images/publications/poster-award-certificate-640.jpg 640w, /assets/images/publications/poster-award-certificate.png 1280w"
-              sizes="(max-width: 760px) 100vw, 34vw"
-              width="1280"
-              height="903"
-              loading="lazy"
-              decoding="async"
-              alt="Best Poster Award certificate from Journée ICube 2026"
-            />
-            <figcaption>Best Poster Award · 2 July 2026, ICube Illkirch</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/publications/poster-presentation-full-480.jpg"
-              width="480"
-              height="647"
-              loading="lazy"
-              decoding="async"
-              alt="Ghinwa Ismail standing beside her research poster"
-            />
-            <figcaption>Poster presentation · Journée ICube 2026</figcaption>
-          </figure>
-        </div>
+        </details>
       </section>
 
       <section className="experience section-shell reveal" id="experience">
@@ -556,40 +509,6 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="projects section-shell reveal" id="projects">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Selected projects</p>
-            <h2>Ideas tested in real systems.</h2>
-          </div>
-          <p>Projects spanning AI, wireless systems, embedded computing, and human-centred applications.</p>
-        </div>
-        <div className="project-grid">
-          {projects.slice(0, 3).map((project, index) => (
-            <article key={project.title}>
-              <div className="project-topline"><span>{String(index + 1).padStart(2, "0")}</span><span>{project.label}</span></div>
-              <h3>{project.title}</h3>
-              <p>{project.text}</p>
-            </article>
-          ))}
-        </div>
-        <details className="more-projects">
-          <summary>
-            <span>More projects</span>
-            <small>Three additional projects across AI, embedded health, and natural language processing</small>
-          </summary>
-          <div className="project-grid">
-            {projects.slice(3).map((project, index) => (
-              <article key={project.title}>
-                <div className="project-topline"><span>{String(index + 4).padStart(2, "0")}</span><span>{project.label}</span></div>
-                <h3>{project.title}</h3>
-                <p>{project.text}</p>
-              </article>
-            ))}
-          </div>
-        </details>
-      </section>
-
       <section className="credentials section-shell reveal">
         <div className="education">
           <p className="section-kicker">Education</p>
@@ -654,8 +573,37 @@ export default function Home() {
         </aside>
       </section>
 
-      <section className="awards section-shell reveal">
+      <section className="awards section-shell reveal" id="recognition">
         <p className="section-kicker">Recognition</p>
+        <div className="recognition-feature">
+          <div className="recognition-copy">
+            <span>Best Poster Award · Journée ICube 2026</span>
+            <h2>Toward Trustworthy Digital Twins for 5G Networks</h2>
+            <p>
+              The poster presents my PhD framework, the OpenAirInterface 5G
+              testbed used for experiments, and the trace-driven traffic model
+              published at NetSoft 2026. It received the Best Poster Award at
+              Journée ICube on 2 July 2026.
+            </p>
+            <div className="recognition-links">
+              <a href="/assets/documents/poster-2026.pdf" target="_blank">View poster ↗</a>
+              <a href="https://www.linkedin.com/in/ghinwa-ismail-a14a65249" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            </div>
+          </div>
+          <figure className="recognition-poster">
+            <img
+              src="/assets/images/publications/poster-presentation-main.jpg"
+              srcSet="/assets/images/publications/poster-presentation-main-540.jpg 540w, /assets/images/publications/poster-presentation-main.jpg 1080w"
+              sizes="(max-width: 760px) 100vw, 46vw"
+              width="1080"
+              height="1148"
+              loading="lazy"
+              decoding="async"
+              alt="Ghinwa Ismail presenting her award-winning Network Digital Twins poster"
+            />
+            <figcaption>Best Poster Award · ICube, 2 July 2026</figcaption>
+          </figure>
+        </div>
         <div className="recognition-layout">
           <figure className="recognition-photo">
             <img
@@ -674,7 +622,6 @@ export default function Home() {
             </figcaption>
           </figure>
           <div className="award-list">
-            <article><span>2026</span><h3>Best Poster Award · Journée ICube</h3></article>
             <article><span>2020</span><h3>AL-Basil Outstanding Graduate Certificate</h3></article>
             <article><span>2017 · 2018 · 2019</span><h3>AL-Basil First Rank Certificates</h3></article>
             <article><span>2021</span><h3>Al-Basel Fair for Innovation · Honored Participant</h3></article>
@@ -686,7 +633,7 @@ export default function Home() {
       <footer id="contact">
         <div className="footer-main">
           <p className="section-kicker">Contact</p>
-          <h2>Research grows through good conversations.</h2>
+          <h2>Get in touch.</h2>
           <a className="email-link" href="mailto:gismail@unistra.fr">gismail@unistra.fr <span aria-hidden="true">↗</span></a>
         </div>
         <div className="footer-bottom">
