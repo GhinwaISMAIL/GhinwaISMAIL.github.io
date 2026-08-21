@@ -948,35 +948,56 @@ h1 {
 .award-seal {
   align-items: center;
   aspect-ratio: 1;
-  background: var(--gold);
-  border: 10px double rgba(255,253,248,0.65);
+  background: radial-gradient(circle at 32% 24%, #fff2b8 0%, #efd077 27%, #d6a43e 58%, #a96e13 100%);
+  border: 2px solid #80500b;
   border-radius: 50%;
-  box-shadow: 0 12px 28px rgba(4,24,31,0.2);
-  color: var(--ink-deep);
+  bottom: 62px;
+  box-shadow:
+    0 15px 32px rgba(4,24,31,0.28),
+    inset 0 0 0 4px #f9e39a,
+    inset 0 0 0 8px rgba(116,70,7,0.46),
+    inset 0 8px 13px rgba(255,248,201,0.42);
+  color: #4b2c05;
   display: flex;
   flex-direction: column;
-  height: 122px;
+  height: 132px;
   justify-content: center;
   pointer-events: none;
   position: absolute;
-  left: 24px;
+  right: 24px;
   text-align: center;
-  top: 24px;
-  transform: rotate(-8deg);
-  width: 122px;
+  transform: rotate(-3deg);
+  width: 132px;
   z-index: 2;
 }
 
+.award-seal::before {
+  border: 1px solid rgba(83,47,3,0.48);
+  border-radius: 50%;
+  content: "";
+  inset: 12px;
+  position: absolute;
+}
+
+.award-seal svg {
+  height: 21px;
+  margin-bottom: 3px;
+  stroke-width: 1.7;
+  width: 21px;
+}
+
 .award-seal span {
-  font-size: 0.6rem;
+  font-size: 0.53rem;
   font-weight: 850;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
 .award-seal strong {
   font-family: var(--serif);
-  font-size: 1.7rem;
+  font-size: 1.72rem;
+  line-height: 1;
+  margin-top: 3px;
 }
 
 .recognition-poster figcaption {
@@ -1217,7 +1238,10 @@ footer {
   .recognition-feature { grid-template-columns: 1fr; }
   .recognition-copy { padding: 34px 24px; }
   .recognition-poster { min-height: 430px; }
-  .award-seal { height: 105px; left: 18px; top: 18px; width: 105px; }
+  .award-seal { bottom: 58px; height: 112px; right: 18px; width: 112px; }
+  .award-seal::before { inset: 10px; }
+  .award-seal svg { height: 18px; width: 18px; }
+  .award-seal strong { font-size: 1.45rem; }
   .recognition-layout { grid-template-columns: 1fr; }
   .recognition-photo { min-height: 500px; }
   .award-list { grid-template-columns: 1fr; }

@@ -1,4 +1,4 @@
-import { BookOpen, ExternalLink, FileText, Github, GraduationCap, Linkedin } from "lucide-react";
+import { Award, BookOpen, ExternalLink, FileText, Github, GraduationCap, Linkedin } from "lucide-react";
 
 const experience = [
   {
@@ -485,6 +485,7 @@ export default function Home() {
               alt="Ghinwa Ismail presenting her award-winning Network Digital Twins poster"
             />
             <div className="award-seal" aria-label="Best Poster Award 2026">
+              <Award aria-hidden="true" />
               <span>Best Poster</span>
               <strong>2026</strong>
             </div>
