@@ -130,20 +130,20 @@ export default function Home() {
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#publications">Publications</a>
+          <a href="#research">Research</a>
           <a href="#contact">Contact</a>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <nav aria-label="Mobile navigation">
             <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#research">Research</a>
             <a href="#contact">Contact</a>
           </nav>
         </details>
@@ -152,23 +152,23 @@ export default function Home() {
       <main id="main-content">
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Academic research portfolio</p>
+          <p className="eyebrow">Telecommunications · Research · Engineering</p>
           <h1>Ghinwa Ismail</h1>
           <p className="hero-role">
-            PhD Researcher in Network Digital Twins for 5G Systems<br />
-            <span>ICube Laboratory · University of Strasbourg</span>
+            Telecommunications Researcher &amp; Engineer<br />
+            <span>Strasbourg, France</span>
           </p>
           <p className="hero-lead">
-            My research develops trustworthy Network Digital Twins for 5G
-            systems by combining real network traces, reproducible 5G testbeds,
-            and machine learning. My current work focuses on realistic traffic
-            generation and experimental validation, with the longer-term goal
-            of enabling uncertainty-aware KPI prediction, what-if analysis,
-            and adaptive network operation.
+            I am a telecommunications researcher and engineer with a background
+            in both software and hardware projects. My work has included network
+            experiments, applied data science, a distributed videoconferencing
+            service, and university teaching. I am currently pursuing a PhD at
+            ICube Laboratory, where I develop traffic models and validation
+            methods for trustworthy Network Digital Twins in 5G systems.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#publications">
-              View publications
+            <a className="button button-primary" href="#experience">
+              View experience
             </a>
             <a className="button button-secondary" href="/assets/documents/resume.pdf" target="_blank">
               View CV <span aria-hidden="true">↗</span>
@@ -204,8 +204,8 @@ export default function Home() {
             />
           </div>
           <div className="profile-caption">
-            <span>Research focus</span>
-            <strong>Network Digital Twins · 5G Systems · Machine Learning · Reproducible Experimentation</strong>
+            <span>Current position</span>
+            <strong>PhD Researcher · ICube Laboratory · University of Strasbourg</strong>
           </div>
         </div>
       </section>
@@ -213,202 +213,22 @@ export default function Home() {
       <section className="about section-shell reveal" id="about">
         <div className="about-copy">
           <p className="section-kicker">About</p>
-          <h2>A telecommunications researcher combining network experimentation and data-driven methods.</h2>
+          <h2>My work combines telecommunications research with practical engineering.</h2>
           <div className="about-columns">
             <p>
-              I am a PhD candidate at the University of Strasbourg, where I
-              work at the ICube Laboratory on trustworthy Network Digital Twins
-              for 5G systems.
+              I studied telecommunications engineering before specialising in
+              data science and network intelligence. My projects have included
+              wireless networks, distributed communication systems, embedded
+              prototypes, and applied machine learning.
             </p>
             <p>
-              Before starting the PhD, I worked on networked systems, machine
-              learning projects, embedded prototypes, and a blockchain-based
-              videoconferencing service. My studies in Syria, Italy, and France
-              gave me experience in both engineering and data science.
+              My experience includes a research internship at Orange Innovation,
+              two years as a teaching assistant at Tishreen University, and my
+              current PhD at ICube. I have studied and worked in Syria, Italy,
+              and France.
             </p>
           </div>
-          <blockquote>
-            I want Network Digital Twins to behave like useful experimental
-            tools, grounded in measurements and honest about uncertainty.
-          </blockquote>
-          <div className="doctoral-supervisors" aria-label="Doctoral supervisors">
-            <span>Doctoral supervisors</span>
-            <div className="supervisor-links">
-              <a href="https://fabrice.theoleyre.cnrs.fr/" target="_blank" rel="noreferrer">
-                <strong>Fabrice Théoleyre</strong>
-                <ExternalLink aria-hidden="true" />
-              </a>
-              <a href="https://samirsim.github.io/" target="_blank" rel="noreferrer">
-                <strong>Samir Si-Mohammed</strong>
-                <ExternalLink aria-hidden="true" />
-              </a>
-            </div>
-          </div>
         </div>
-      </section>
-
-      <section className="work-index section-shell reveal" id="work" aria-labelledby="work-title">
-        <div className="work-intro">
-          <p className="section-kicker">Selected work</p>
-          <h2 id="work-title">A selection of research and engineering work.</h2>
-          <p>
-            Recent PhD outputs sit alongside earlier work in distributed systems
-            and data science.
-          </p>
-        </div>
-        <div className="work-list">
-          <a href="#publications">
-            <span className="work-number">01</span>
-            <span className="work-type">Full paper · IEEE NetSoft 2026</span>
-            <strong>Trace-driven burst traffic generation for 5G Network Digital Twins</strong>
-            <i aria-hidden="true">↘</i>
-          </a>
-          <a href="#publications">
-            <span className="work-number">02</span>
-            <span className="work-type">Accepted demo · IEEE LCN 2026</span>
-            <strong>TwinDash: a traffic generator for reproducible 5G experiments</strong>
-            <i aria-hidden="true">↘</i>
-          </a>
-          <a href="#publications">
-            <span className="work-number">03</span>
-            <span className="work-type">Paper and prototype · BRAINS 2024</span>
-            <strong>A decentralised videoconferencing service using Ethereum smart contracts</strong>
-            <i aria-hidden="true">↘</i>
-          </a>
-          <a href="#projects">
-            <span className="work-number">04</span>
-            <span className="work-type">Data science project</span>
-            <strong>Video streaming quality prediction</strong>
-            <i aria-hidden="true">↘</i>
-          </a>
-        </div>
-      </section>
-
-      <section className="research section-shell reveal" id="research">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Research</p>
-            <h2>Current work toward trustworthy Network Digital Twins.</h2>
-          </div>
-          <p>
-            My PhD begins with measured traffic and reproducible experiments.
-            Prediction and what-if analysis come later, once that foundation is reliable.
-          </p>
-        </div>
-        <div className="research-grid">
-          {researchThemes.map((theme) => (
-            <article key={theme.number}>
-              <span className="card-number">{theme.number}</span>
-              {theme.stage && <span className="research-stage">{theme.stage}</span>}
-              <h3>{theme.title}</h3>
-              <p>{theme.text}</p>
-              <ul aria-label={`${theme.title} topics`}>
-                {theme.tags.map((tag) => <li key={tag}>{tag}</li>)}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="publications section-shell reveal" id="publications">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Publications</p>
-            <h2>Papers and accepted work.</h2>
-          </div>
-          <p>Official links and public artifacts are included when available.</p>
-        </div>
-
-        <div className="publication-list">
-          <article className="publication-row publication-row-featured">
-            <div className="publication-kind">
-              <span className="status">Full paper · 2026</span>
-              <small>IEEE NetSoft · Berlin, Germany</small>
-            </div>
-            <div>
-              <h3>Lightweight Trace-Driven Burst Traffic Generation for 5G Network Digital Twins</h3>
-              <p>Ghinwa Ismail · Samir Si-Mohammed · Fabrice Théoleyre</p>
-              <small>
-                In 2026 IEEE 12th International Conference on Network
-                Softwarization (NetSoft), Berlin, Germany, pp. 162–170.
-              </small>
-            </div>
-            <div className="publication-links publication-row-links">
-              <a href="https://doi.org/10.1109/NETSOFT70012.2026.11603454" target="_blank" rel="noreferrer">Official DOI ↗</a>
-              <a href="https://samirsim.github.io/docs/NetSoft-2026.pdf" target="_blank" rel="noreferrer">Paper PDF ↗</a>
-              <a href="https://github.com/GhinwaISMAIL/multimodal-traffic-digital-twins" target="_blank" rel="noreferrer">Code & artifacts ↗</a>
-            </div>
-          </article>
-
-          <article className="publication-row">
-            <div className="publication-kind"><span className="status">Accepted demo · 2026</span></div>
-            <div>
-              <h3>TwinDash – a Dashboard-Based Traffic Generator for Reproducible 5G Experiments</h3>
-              <p>Ghinwa Ismail · Samir Si-Mohammed · Fabrice Théoleyre</p>
-              <small>51st IEEE Conference on Local Computer Networks (LCN 2026) · Coimbra, Portugal</small>
-            </div>
-            <span className="forthcoming">Publication forthcoming</span>
-          </article>
-
-          <article className="publication-row">
-            <div className="publication-kind"><span className="status">Conference paper · 2024</span></div>
-            <div>
-              <h3>A Decentralised Videoconferencing Service using Ethereum Smart Contracts</h3>
-              <p>Ghinwa Ismail · Julien Hatin · Juliette Cantais · Valentin André</p>
-              <small>BRAINS 2024 · Blockchain Research & Applications for Innovative Networks and Services</small>
-            </div>
-            <a href="https://doi.org/10.1109/BRAINS63024.2024.10732428" target="_blank" rel="noreferrer">DOI ↗</a>
-          </article>
-        </div>
-
-        <div className="publication-cta">
-          <p>Looking for the complete academic record?</p>
-          <div className="publication-profile-links">
-            <a href="https://scholar.google.com/citations?user=uCI4JNcAAAAJ&hl=en" target="_blank" rel="noreferrer">
-              <GraduationCap aria-hidden="true" /> Google Scholar
-            </a>
-            <a href="https://www.researchgate.net/profile/Ghinwa-Ismail-4" target="_blank" rel="noreferrer">
-              <BookOpen aria-hidden="true" /> ResearchGate
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="projects section-shell reveal" id="projects">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Engineering and research projects</p>
-            <h2>Projects completed during my studies and engineering work.</h2>
-          </div>
-          <p>
-            These projects come from earlier studies and engineering work in data
-            science, RF design, embedded systems, computer vision, and natural language processing.
-          </p>
-        </div>
-        <div className="project-grid">
-          {projects.slice(0, 3).map((project, index) => (
-            <article key={project.title}>
-              <div className="project-topline"><span>{String(index + 1).padStart(2, "0")}</span><span>{project.label}</span></div>
-              <h3>{project.title}</h3>
-              <p>{project.text}</p>
-            </article>
-          ))}
-        </div>
-        <details className="more-projects">
-          <summary>
-            <span>More projects</span>
-            <small>Three additional projects in computer vision, embedded health, and natural language processing</small>
-          </summary>
-          <div className="project-grid">
-            {projects.slice(3).map((project, index) => (
-              <article key={project.title}>
-                <div className="project-topline"><span>{String(index + 4).padStart(2, "0")}</span><span>{project.label}</span></div>
-                <h3>{project.title}</h3>
-                <p>{project.text}</p>
-              </article>
-            ))}
-          </div>
-        </details>
       </section>
 
       <section className="experience section-shell reveal" id="experience">
@@ -479,34 +299,144 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="supervision section-shell reveal" id="students">
-        <div className="supervision-heading">
-          <p className="section-kicker">Student supervision</p>
-          <h2>Current supervision</h2>
+      <section className="projects section-shell reveal" id="projects">
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">Engineering and research projects</p>
+            <h2>Projects completed during my studies and engineering work.</h2>
+          </div>
+          <p>
+            These projects come from earlier studies and engineering work in data
+            science, RF design, embedded systems, computer vision, and natural language processing.
+          </p>
         </div>
-        <article className="student-card">
-          <div className="student-name">
-            <span>Current student · M1 Internship · 2026</span>
-            <h3>Jeronimo Herdoïza</h3>
-            <p>
-              University of Strasbourg · CMI Informatique · Master in Computer
-              Engineering, Systems and Networks
-            </p>
+        <div className="project-grid">
+          {projects.slice(0, 3).map((project, index) => (
+            <article key={project.title}>
+              <div className="project-topline"><span>{String(index + 1).padStart(2, "0")}</span><span>{project.label}</span></div>
+              <h3>{project.title}</h3>
+              <p>{project.text}</p>
+            </article>
+          ))}
+        </div>
+        <details className="more-projects">
+          <summary>
+            <span>More projects</span>
+            <small>Three additional projects in computer vision, embedded health, and natural language processing</small>
+          </summary>
+          <div className="project-grid">
+            {projects.slice(3).map((project, index) => (
+              <article key={project.title}>
+                <div className="project-topline"><span>{String(index + 4).padStart(2, "0")}</span><span>{project.label}</span></div>
+                <h3>{project.title}</h3>
+                <p>{project.text}</p>
+              </article>
+            ))}
           </div>
-          <div className="student-project">
-            <span>Research project</span>
-            <h3>Deployment and Benchmarking of a Reproducible 5G Standalone Platform</h3>
-            <p>
-              The internship focuses on building a reproducible 5G standalone
-              platform and establishing a rigorous benchmarking workflow for
-              experimental evaluation.
-            </p>
+        </details>
+      </section>
+
+      <section className="publications section-shell reveal" id="publications">
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">Publications</p>
+            <h2>Papers and accepted work.</h2>
           </div>
-          <div className="supervisor-line">
-            <span>Supervisor</span>
-            <strong>Ghinwa Ismail</strong>
+          <p>Official links and public artifacts are included when available.</p>
+        </div>
+
+        <div className="publication-list">
+          <article className="publication-row publication-row-featured">
+            <div className="publication-kind">
+              <span className="status">Full paper · 2026</span>
+              <small>IEEE NetSoft · Berlin, Germany</small>
+            </div>
+            <div>
+              <h3>Lightweight Trace-Driven Burst Traffic Generation for 5G Network Digital Twins</h3>
+              <p>Ghinwa Ismail · Samir Si-Mohammed · Fabrice Théoleyre</p>
+              <small>
+                In 2026 IEEE 12th International Conference on Network
+                Softwarization (NetSoft), Berlin, Germany, pp. 162–170.
+              </small>
+            </div>
+            <div className="publication-links publication-row-links">
+              <a href="https://doi.org/10.1109/NETSOFT70012.2026.11603454" target="_blank" rel="noreferrer">Official DOI ↗</a>
+              <a href="https://samirsim.github.io/docs/NetSoft-2026.pdf" target="_blank" rel="noreferrer">Paper PDF ↗</a>
+              <a href="https://github.com/GhinwaISMAIL/multimodal-traffic-digital-twins" target="_blank" rel="noreferrer">Code & artifacts ↗</a>
+            </div>
+          </article>
+
+          <article className="publication-row">
+            <div className="publication-kind"><span className="status">Accepted demo · 2026</span></div>
+            <div>
+              <h3>TwinDash – a Dashboard-Based Traffic Generator for Reproducible 5G Experiments</h3>
+              <p>Ghinwa Ismail · Samir Si-Mohammed · Fabrice Théoleyre</p>
+              <small>51st IEEE Conference on Local Computer Networks (LCN 2026) · Coimbra, Portugal</small>
+            </div>
+            <span className="forthcoming">Publication forthcoming</span>
+          </article>
+
+          <article className="publication-row">
+            <div className="publication-kind"><span className="status">Conference paper · 2024</span></div>
+            <div>
+              <h3>A Decentralised Videoconferencing Service using Ethereum Smart Contracts</h3>
+              <p>Ghinwa Ismail · Julien Hatin · Juliette Cantais · Valentin André</p>
+              <small>BRAINS 2024 · Blockchain Research & Applications for Innovative Networks and Services</small>
+            </div>
+            <a href="https://doi.org/10.1109/BRAINS63024.2024.10732428" target="_blank" rel="noreferrer">DOI ↗</a>
+          </article>
+        </div>
+
+        <div className="publication-cta">
+          <p>Looking for the complete academic record?</p>
+          <div className="publication-profile-links">
+            <a href="https://scholar.google.com/citations?user=uCI4JNcAAAAJ&hl=en" target="_blank" rel="noreferrer">
+              <GraduationCap aria-hidden="true" /> Google Scholar
+            </a>
+            <a href="https://www.researchgate.net/profile/Ghinwa-Ismail-4" target="_blank" rel="noreferrer">
+              <BookOpen aria-hidden="true" /> ResearchGate
+            </a>
           </div>
-        </article>
+        </div>
+      </section>
+
+      <section className="research section-shell reveal" id="research">
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">Current research</p>
+            <h2>Network Digital Twins for 5G systems.</h2>
+          </div>
+          <p>
+            My PhD begins with measured traffic and reproducible experiments.
+            Prediction and what-if analysis come later, once that foundation is reliable.
+          </p>
+        </div>
+        <div className="research-grid">
+          {researchThemes.map((theme) => (
+            <article key={theme.number}>
+              <span className="card-number">{theme.number}</span>
+              {theme.stage && <span className="research-stage">{theme.stage}</span>}
+              <h3>{theme.title}</h3>
+              <p>{theme.text}</p>
+              <ul aria-label={`${theme.title} topics`}>
+                {theme.tags.map((tag) => <li key={tag}>{tag}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+        <div className="doctoral-supervisors" aria-label="Doctoral supervisors">
+          <span>Doctoral supervisors</span>
+          <div className="supervisor-links">
+            <a href="https://fabrice.theoleyre.cnrs.fr/" target="_blank" rel="noreferrer">
+              <strong>Fabrice Théoleyre</strong>
+              <ExternalLink aria-hidden="true" />
+            </a>
+            <a href="https://samirsim.github.io/" target="_blank" rel="noreferrer">
+              <strong>Samir Si-Mohammed</strong>
+              <ExternalLink aria-hidden="true" />
+            </a>
+          </div>
+        </div>
       </section>
 
       <section className="credentials section-shell reveal">
@@ -571,6 +501,36 @@ export default function Home() {
           ))}
           <div className="languages"><strong>Languages</strong><span>Arabic · English · French</span></div>
         </aside>
+      </section>
+
+      <section className="supervision section-shell reveal" id="students">
+        <div className="supervision-heading">
+          <p className="section-kicker">Student supervision</p>
+          <h2>Current supervision</h2>
+        </div>
+        <article className="student-card">
+          <div className="student-name">
+            <span>Current student · M1 Internship · 2026</span>
+            <h3>Jeronimo Herdoïza</h3>
+            <p>
+              University of Strasbourg · CMI Informatique · Master in Computer
+              Engineering, Systems and Networks
+            </p>
+          </div>
+          <div className="student-project">
+            <span>Research project</span>
+            <h3>Deployment and Benchmarking of a Reproducible 5G Standalone Platform</h3>
+            <p>
+              The internship focuses on building a reproducible 5G standalone
+              platform and establishing a rigorous benchmarking workflow for
+              experimental evaluation.
+            </p>
+          </div>
+          <div className="supervisor-line">
+            <span>Supervisor</span>
+            <strong>Ghinwa Ismail</strong>
+          </div>
+        </article>
       </section>
 
       <section className="awards section-shell reveal" id="recognition">

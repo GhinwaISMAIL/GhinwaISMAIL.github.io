@@ -16,19 +16,20 @@ async function render() {
   );
 }
 
-test("renders Ghinwa Ismail's complete research portfolio", async () => {
+test("renders Ghinwa Ismail's complete career portfolio", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Ghinwa Ismail \| Network Digital Twins for 5G Systems<\/title>/i);
-  assert.match(html, /PhD Researcher in Network Digital Twins for 5G Systems/);
-  assert.match(html, /My research develops trustworthy Network Digital Twins/);
-  assert.match(html, /uncertainty-aware KPI prediction, what-if analysis, and adaptive network operation/);
+  assert.match(html, /<title>Ghinwa Ismail \| Telecommunications Researcher &amp; Engineer<\/title>/i);
+  assert.match(html, /Telecommunications Researcher &amp; Engineer/);
+  assert.match(html, /I am a telecommunications researcher and engineer/);
+  assert.match(html, /currently pursuing a PhD at ICube Laboratory/);
   assert.doesNotMatch(html, /predict network behaviour, support what-if analysis/);
-  assert.match(html, /Academic research portfolio/);
-  assert.match(html, /A selection of research and engineering work/);
+  assert.match(html, /Telecommunications · Research · Engineering/);
+  assert.doesNotMatch(html, /Selected work|A selection of research and engineering work/);
+  assert.doesNotMatch(html, /useful experimental tools/);
   assert.match(html, /Network Digital Twins for 5G/);
   assert.match(html, /Trace-Driven Traffic Modelling/);
   assert.match(html, /Reproducible 5G Experimentation/);
@@ -83,11 +84,13 @@ test("renders Ghinwa Ismail's complete research portfolio", async () => {
     "academic activities belong in the experience section",
   );
   assert.ok(
-    html.indexOf('id="about"') < html.indexOf('id="work"') &&
-      html.indexOf('id="work"') < html.indexOf('id="research"') &&
-      html.indexOf('id="publications"') < html.indexOf('id="projects"') &&
-      html.indexOf('id="projects"') < html.indexOf('id="experience"'),
-    "the main sections follow the intended portfolio order",
+    html.indexOf('id="about"') < html.indexOf('id="experience"') &&
+      html.indexOf('id="experience"') < html.indexOf('id="projects"') &&
+      html.indexOf('id="projects"') < html.indexOf('id="publications"') &&
+      html.indexOf('id="publications"') < html.indexOf('id="research"') &&
+      html.indexOf("Academic path") < html.indexOf('id="students"') &&
+      html.indexOf('id="students"') < html.indexOf('id="recognition"'),
+    "the main sections follow the intended career portfolio order",
   );
   assert.doesNotMatch(html, /SkeletonPreview|react-loading-skeleton/i);
 });
@@ -100,6 +103,7 @@ test("ships the public portfolio assets and removes starter-only files", async (
     "public/assets/icons/favicon-32.png",
     "public/assets/icons/apple-touch-icon.png",
     "public/assets/images/social/og.png",
+    "public/assets/images/social/og-career.png",
     "public/assets/images/profile/portrait-highres.jpg",
     "public/assets/images/profile/portrait-highres-700.jpg",
     "public/assets/images/publications/poster-2026.jpg",

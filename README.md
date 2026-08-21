@@ -1,11 +1,10 @@
-# Ghinwa Ismail — Research Portfolio
+# Ghinwa Ismail — Career Portfolio
 
-Personal academic portfolio of Ghinwa Ismail, PhD researcher at the University
-of Strasbourg's ICube Laboratory.
+Personal career portfolio of Ghinwa Ismail, a telecommunications researcher and
+engineer currently pursuing a PhD at the University of Strasbourg's ICube Laboratory.
 
-The site presents current research on trustworthy Network Digital Twins for 5G,
-trace-driven traffic modelling, reproducible experimentation, publications,
-earlier engineering projects, experience, education, and recognition.
+The site presents professional experience, engineering projects, publications,
+current research, education, student supervision, and recognition.
 
 ## Project structure
 
