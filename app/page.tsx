@@ -1,56 +1,5 @@
 import { BookOpen, ExternalLink, FileText, Github, GraduationCap, Linkedin } from "lucide-react";
 
-const researchThemes = [
-  {
-    number: "01",
-    title: "Network Digital Twins for 5G",
-    text: "My work develops the traffic models and validation methods needed for trustworthy Network Digital Twins, using measurements from reproducible 5G experiments.",
-    tags: [
-      "Network traces",
-      "Digital Twin validation",
-      "Calibration",
-      "5G systems",
-      "Reproducibility",
-    ],
-  },
-  {
-    number: "02",
-    title: "Trace-Driven Traffic Modelling",
-    text: "I study application traffic from packet traces and use burst-based models to generate realistic workloads for controlled experiments.",
-    tags: [
-      "ON/OFF burst models",
-      "Clustering",
-      "Markov models",
-      "Synthetic workloads",
-      "Traffic reconstruction",
-    ],
-  },
-  {
-    number: "03",
-    title: "Reproducible 5G Experimentation",
-    text: "I deploy OpenAirInterface 5G Standalone testbeds and define repeatable procedures for traffic injection, KPI measurement, and benchmarking.",
-    tags: [
-      "OpenAirInterface",
-      "5G Standalone",
-      "Network testbeds",
-      "Controlled measurements",
-      "Performance benchmarking",
-    ],
-  },
-  {
-    number: "04",
-    title: "KPI Prediction and What-If Analysis",
-    stage: "Ongoing research direction",
-    text: "This is the next stage of my PhD. I plan to use validated traffic and testbed data for uncertainty-aware KPI prediction and controlled what-if studies.",
-    tags: [
-      "KPI prediction",
-      "Uncertainty estimation",
-      "What-if experiments",
-      "Longer-term direction",
-    ],
-  },
-];
-
 const experience = [
   {
     period: "2024 — Present",
@@ -133,7 +82,6 @@ export default function Home() {
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#publications">Publications</a>
-          <a href="#research">Research</a>
           <a href="#contact">Contact</a>
         </nav>
         <details className="mobile-menu">
@@ -143,7 +91,6 @@ export default function Home() {
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#publications">Publications</a>
-            <a href="#research">Research</a>
             <a href="#contact">Contact</a>
           </nav>
         </details>
@@ -246,6 +193,21 @@ export default function Home() {
                 <h3>{item.role}</h3>
                 <p className="place">{item.place}</p>
                 <p>{item.text}</p>
+                {item.role === "PhD Researcher in Telecommunications" && (
+                  <div className="experience-supervisors" aria-label="Doctoral supervisors">
+                    <span>Doctoral supervisors</span>
+                    <div className="supervisor-links">
+                      <a href="https://fabrice.theoleyre.cnrs.fr/" target="_blank" rel="noreferrer">
+                        <strong>Fabrice Théoleyre</strong>
+                        <ExternalLink aria-hidden="true" />
+                      </a>
+                      <a href="https://samirsim.github.io/" target="_blank" rel="noreferrer">
+                        <strong>Samir Si-Mohammed</strong>
+                        <ExternalLink aria-hidden="true" />
+                      </a>
+                    </div>
+                  </div>
+                )}
               </div>
             </article>
           ))}
@@ -395,45 +357,6 @@ export default function Home() {
             </a>
             <a href="https://www.researchgate.net/profile/Ghinwa-Ismail-4" target="_blank" rel="noreferrer">
               <BookOpen aria-hidden="true" /> ResearchGate
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="research section-shell reveal" id="research">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Current research</p>
-            <h2>Network Digital Twins for 5G systems.</h2>
-          </div>
-          <p>
-            My PhD begins with measured traffic and reproducible experiments.
-            Prediction and what-if analysis come later, once that foundation is reliable.
-          </p>
-        </div>
-        <div className="research-grid">
-          {researchThemes.map((theme) => (
-            <article key={theme.number}>
-              <span className="card-number">{theme.number}</span>
-              {theme.stage && <span className="research-stage">{theme.stage}</span>}
-              <h3>{theme.title}</h3>
-              <p>{theme.text}</p>
-              <ul aria-label={`${theme.title} topics`}>
-                {theme.tags.map((tag) => <li key={tag}>{tag}</li>)}
-              </ul>
-            </article>
-          ))}
-        </div>
-        <div className="doctoral-supervisors" aria-label="Doctoral supervisors">
-          <span>Doctoral supervisors</span>
-          <div className="supervisor-links">
-            <a href="https://fabrice.theoleyre.cnrs.fr/" target="_blank" rel="noreferrer">
-              <strong>Fabrice Théoleyre</strong>
-              <ExternalLink aria-hidden="true" />
-            </a>
-            <a href="https://samirsim.github.io/" target="_blank" rel="noreferrer">
-              <strong>Samir Si-Mohammed</strong>
-              <ExternalLink aria-hidden="true" />
             </a>
           </div>
         </div>

@@ -4,7 +4,8 @@ Personal career portfolio of Ghinwa Ismail, a telecommunications researcher and
 engineer currently pursuing a PhD at the University of Strasbourg's ICube Laboratory.
 
 The site presents professional experience, engineering projects, publications,
-current research, education, student supervision, and recognition.
+education, student supervision, and recognition. The current PhD role appears
+within the career timeline.
 
 ## Project structure
 

@@ -30,11 +30,8 @@ test("renders Ghinwa Ismail's complete career portfolio", async () => {
   assert.match(html, /Telecommunications · Research · Engineering/);
   assert.doesNotMatch(html, /Selected work|A selection of research and engineering work/);
   assert.doesNotMatch(html, /useful experimental tools/);
-  assert.match(html, /Network Digital Twins for 5G/);
-  assert.match(html, /Trace-Driven Traffic Modelling/);
-  assert.match(html, /Reproducible 5G Experimentation/);
-  assert.match(html, /KPI Prediction and What-If Analysis/);
-  assert.match(html, /Ongoing research direction/);
+  assert.doesNotMatch(html, /id="research"|Current research|KPI Prediction and What-If Analysis/);
+  assert.doesNotMatch(html, /href="#research"/);
   assert.match(html, /Lightweight Trace-Driven Burst Traffic Generation/);
   assert.match(html, /IEEE NetSoft(?: 2026)? · Berlin, Germany/);
   assert.match(html, /Full paper · 2026/);
@@ -87,7 +84,7 @@ test("renders Ghinwa Ismail's complete career portfolio", async () => {
     html.indexOf('id="about"') < html.indexOf('id="experience"') &&
       html.indexOf('id="experience"') < html.indexOf('id="projects"') &&
       html.indexOf('id="projects"') < html.indexOf('id="publications"') &&
-      html.indexOf('id="publications"') < html.indexOf('id="research"') &&
+      html.indexOf('id="publications"') < html.indexOf("Academic path") &&
       html.indexOf("Academic path") < html.indexOf('id="students"') &&
       html.indexOf('id="students"') < html.indexOf('id="recognition"'),
     "the main sections follow the intended career portfolio order",
