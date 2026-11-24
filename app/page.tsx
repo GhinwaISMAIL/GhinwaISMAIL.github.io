@@ -158,10 +158,10 @@ export default function Home() {
       </section>
 
       <div className="latest-shell">
-        <a className="latest-strip" href="#publications" aria-label="View the latest IEEE NetSoft 2026 publication">
+        <a className="latest-strip" href="#publications" aria-label="View the latest publication: TwinDash demo at IEEE LCN 2026">
           <span className="latest-label">Latest</span>
-          <strong>IEEE NetSoft 2026</strong>
-          <span>Full paper, presentation, code and artifacts</span>
+          <strong>IEEE LCN 2026</strong>
+          <span>Demo paper · TwinDash traffic generator</span>
           <span className="latest-arrow" aria-hidden="true">→</span>
         </a>
       </div>
@@ -338,13 +338,17 @@ export default function Home() {
           </article>
 
           <article className="publication-row">
-            <div className="publication-kind"><span className="status">Accepted demo · 2026</span></div>
+            <div className="publication-kind"><span className="status">Demo paper · 2026</span></div>
             <div>
               <h3>TwinDash – a Dashboard-Based Traffic Generator for Reproducible 5G Experiments</h3>
               <p>Ghinwa Ismail · Samir Si-Mohammed · Fabrice Théoleyre</p>
               <small>51st IEEE Conference on Local Computer Networks (LCN 2026) · Coimbra, Portugal</small>
             </div>
-            <span className="forthcoming">Publication forthcoming</span>
+            <div className="publication-links publication-row-links">
+              <a href="https://doi.org/10.1109/LCN-C71703.2026.11775677" target="_blank" rel="noreferrer">Official DOI ↗</a>
+              <a href="https://hal.science/hal-05877265/document" target="_blank" rel="noreferrer">Paper PDF ↗</a>
+              <a href="https://github.com/GhinwaISMAIL/traffic-generation-dashboard" target="_blank" rel="noreferrer">Code & artifacts ↗</a>
+            </div>
           </article>
 
           <article className="publication-row">

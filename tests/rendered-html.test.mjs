@@ -29,7 +29,7 @@ test("renders Ghinwa Ismail's complete career portfolio", async () => {
   assert.doesNotMatch(html, /predict network behaviour, support what-if analysis/);
   assert.match(html, /Telecommunications · Research · Engineering/);
   assert.match(html, /Latest/);
-  assert.match(html, /Full paper, presentation, code and artifacts/);
+  assert.match(html, /Demo paper · TwinDash traffic generator/);
   assert.doesNotMatch(html, /network-constellation|constellation-node|constellation-packet/);
   assert.doesNotMatch(html, /Selected work|A selection of research and engineering work/);
   assert.doesNotMatch(html, /useful experimental tools/);
@@ -55,8 +55,8 @@ test("renders Ghinwa Ismail's complete career portfolio", async () => {
   assert.equal((html.match(/Certificate for the First-Ranked Student/g) ?? []).length, 8);
   assert.doesNotMatch(html, /AL-Basil First Rank Certificates/);
   assert.match(html, /TwinDash/);
-  assert.match(html, /Accepted demo/);
-  assert.match(html, /Publication forthcoming/);
+  assert.match(html, /Demo paper/);
+  assert.match(html, /LCN-C71703/);
   assert.match(html, /Google Scholar/);
   assert.match(html, /scholar\.google\.com\/citations\?user=uCI4JNcAAAAJ&amp;hl=en/);
   assert.match(html, /Doctoral supervisors/);
